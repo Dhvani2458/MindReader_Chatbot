@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindreader Chatbot</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="hero">
+            <h1>Mindreader Chatbot</h1>
+
+            <p>
+                Can I read what you're hiding?
+            </p>
+        </div>
+
+        <div class="setup-card">
+
+            <div class="input-group">
+                <label>👤 Your Role</label>
+
+                <select id="role">
+                    <option value="student">Student</option>
+                    <option value="faculty">Faculty</option>
+                </select>
+            </div>
+
+            <div class="input-group">
+                <label>✏️ Your Name</label>
+
+                <input
+                    type="text"
+                    id="name"
+                    placeholder="Enter your name">
+            </div>
+
+            <div class="input-group">
+                <label>⚧ Your Gender</label>
+
+                <select id="gender">
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <button
+                class="start-btn"
+                onclick="startGame()">
+                Start Game
+            </button>
+
+        </div>
+
+        <!-- Chat Section -->
+
+        <div id="chatSection" style="display:none;">
+
+            <div class="chat-window">
+
+                <div class="chat-header">
+                    Mindreader Chatbot
+                </div>
+
+                <div id="chatBox"></div>
+
+                <div class="chat-input">
+
+                    <input
+                        type="text"
+                        id="message"
+                        placeholder="Type your answer...">
+
+                    <button id="sendBtn">
+                        Send
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
